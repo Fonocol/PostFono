@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/PostFono/static/css/main.f855e6bc.css",
-    "main.js": "/PostFono/static/js/main.a8cc2ee6.js",
+    "main.css": "/PostFono/static/css/main.92d4c54d.css",
+    "main.js": "/PostFono/static/js/main.ade13dea.js",
     "static/js/453.5675c730.chunk.js": "/PostFono/static/js/453.5675c730.chunk.js",
-    "static/media/cat.gif": "/PostFono/static/media/cat.dd21fa171dfe96a39312.gif",
+    "static/media/bac.png": "/PostFono/static/media/bac.c62986e72333fe62bf4e.png",
     "index.html": "/PostFono/index.html",
-    "main.f855e6bc.css.map": "/PostFono/static/css/main.f855e6bc.css.map",
-    "main.a8cc2ee6.js.map": "/PostFono/static/js/main.a8cc2ee6.js.map",
+    "main.92d4c54d.css.map": "/PostFono/static/css/main.92d4c54d.css.map",
+    "main.ade13dea.js.map": "/PostFono/static/js/main.ade13dea.js.map",
     "453.5675c730.chunk.js.map": "/PostFono/static/js/453.5675c730.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.a8cc2ee6.js"
+    "static/css/main.92d4c54d.css",
+    "static/js/main.ade13dea.js"
   ]
 }
