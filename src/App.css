@@ -1,38 +1,244 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  cursor: pointer;
+}
+
+:root{
+  --black: #1c1c1c;
+  --gray: #7e7e7e;
+  --gray-light: #e4e4e4;
+  --red: #b30000;
+  --blue: #1f69d8;
+  --green: rgb(0, 252, 96);
+  --pink: #f8d9e8;
+  --fond-size-base: 1rem;
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --border-radius: 10px;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  font-size: var(--fond-size-base);
+  background-color: #faf5ee;
+  background-image: url("/public/img/bac.png");
+  margin: 0;
+}
+
+img{
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+main{
+  padding: 10px;
+  max-width: 960px;
+  background-color: none;
+  margin: 0 auto;
+}
+
+header{
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+header a{
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.logo{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header nav{
+  display: flex;
+  gap: 15px;
+}
+
+div.post{
+  border-radius: 10px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 700px){
+  div.post{
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+
+div.post div.texts h2{
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+div.post div.texts a{
+  text-decoration: none;
+  color:  inherit;
+}
+
+div.post p.info{
+  margin: 6px 0;
+  color: #888;
+  font-size: .7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+div.post p.info a.author{
+  text-decoration: none;
+  color: #333;
+}
+
+div.post p.summary{
+  margin: 10px 0;
+  line-height: 1.4rem;
+}
+
+/*register login*/
+
+form.login, form.register{
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+input{
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px 7px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+button{
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+}
+
+form.login h1,form.register h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div.post-page div.image{
+  max-height: 200px;
   display: flex;
-  flex-direction: column;
+  overflow:hidden;
+}
+
+div.post-page div.image img{
+  object-fit: cover;
+  object-position: center center;
+  width:100%;
+}
+
+div.post-page a{
+  color:#333;
+  text-decoration: underline;
+}
+
+div.post-page h1{
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time{
+  text-align: center;
+  display: block;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+div.post-page div.author{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+div.post-page div.content p{
+  line-height: 1.6rem;
+}
+
+div.edit-row{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+div.post-page a.edit-btn{
+  background-color:#333;
+  display: inline-flex;
+  align-items:center;
+  gap:5px;
+  color:#fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+a svg{
+  height: 20px;
+}
+
+
+select.seclect-option {
+  border-radius: 5px;
+  border: 2px solid #ddd;
+
+  width: 100%;
+  padding: 5px 7px;
+  
+  background-color: transparent; /* Retire le fond */
+   /* Retire le style par défaut de la liste déroulante */
+}
+
+footer.footer{
+  margin: 4rem;
+  text-align: center;
+}
+
+img.profil{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+form.pp{
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+form.pp label img {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }

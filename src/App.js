@@ -1,12 +1,18 @@
-import cat from './cat.gif';
+import Layout from './layout';
+import IndexPage from './pages/indexpage';
+import {Route,Routes} from 'react-router-dom';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-        <img src={cat} alt='cat gif'/>
-        <h1>je suis Fono colince </h1>
-    </div>
+    <Routes>
+        <Route path='/' element={<Layout/>}>
+
+            <Route index element={<IndexPage/>} />
+
+        </Route>
+      </Routes>
   );
 }
 
